@@ -33,7 +33,7 @@ menu:
     - icon-container
   我的朋友:
     - /PY.html
-  给我赞助:
+  请杯咖啡:
     - https://nexmoe.com/donate.html
     - icon-coffee
   关于博主:
@@ -45,43 +45,43 @@ widgets:
     enable: true
     options:
       search:
-        type: engine # 可选engine（用搜索引擎搜索）、swiftype、或local（本地搜索）
+        type: local # 可选engine（用搜索引擎搜索）、swiftype、或local（本地搜索）
         url: https://cn.bing.com/search?q=site:nexmoe.com # 搜索引擎地址，在type为swiftype时无效 e.g:https://www.google.com/search?q={你的博客链接}
         id: <swiftype-id> # swiftype的id，见启用教程。在type为engine时无效
-  - name: social
-    enable: true
-    options:
-      social:
-        QQ群:
-          - https://jq.qq.com/?_wv=1027&k=5CfKHun
-          - icon-QQ
-          - rgb(249, 174, 8)
-          - rgba(249, 174, 8, .1)
-        哔哩哔哩:
-          - https://space.bilibili.com/20238211
-          - icon-bilibili
-          - rgb(231, 106, 141)
-          - rgba(231, 106, 141, .1)
-        GitHub:
-          - https://github.com/nexmoe/
-          - icon-github
-          - rgb(25, 23, 23)
-          - rgba(25, 23, 23, .1)
-        知乎:
-          - https://www.zhihu.com/people/nexmoe
-          - icon-zhihu
-          - rgb(30, 136, 229)
-          - rgba(30, 136, 229, .1)
-        Twitter:
-          - https://twitter.com/nexmoe
-          - icon-twitter
-          - rgb(59, 151, 239)
-          - rgba(59, 151, 239, .1)
-        RSS:
-          - https://nexmoe.com/atom.xml
-          - icon-rss
-          - rgb(247, 132, 34)
-          - rgba(247, 132, 34, .1)
+#  - name: social
+#    enable: true
+#    options:
+#      social:
+#        QQ群:
+#          - https://jq.qq.com/?_wv=1027&k=5CfKHun
+#          - icon-QQ
+#          - rgb(249, 174, 8)
+#          - rgba(249, 174, 8, .1)
+#        哔哩哔哩:
+#          - https://space.bilibili.com/20238211
+#          - icon-bilibili
+#          - rgb(231, 106, 141)
+#          - rgba(231, 106, 141, .1)
+#        GitHub:
+#          - https://github.com/nexmoe/
+#          - icon-github
+#          - rgb(25, 23, 23)
+#          - rgba(25, 23, 23, .1)
+#        知乎:
+#          - https://www.zhihu.com/people/nexmoe
+#          - icon-zhihu
+#          - rgb(30, 136, 229)
+#          - rgba(30, 136, 229, .1)
+#        Twitter:
+#          - https://twitter.com/nexmoe
+#          - icon-twitter
+#          - rgb(59, 151, 239)
+#          - rgba(59, 151, 239, .1)
+#        RSS:
+#          - https://nexmoe.com/atom.xml
+#          - icon-rss
+#          - rgb(247, 132, 34)
+#          - rgba(247, 132, 34, .1)
   - name: category
     enable: true
   - name: tagcloud
@@ -103,13 +103,13 @@ widgets:
         show_count: true  #是否展示数量
   - name: recent_posts
     enable: true
-  - name: link #settings: widgetLink
-    enable: true
-    options:
-      widgetLink: #链接组件
-        - title: 折影轻梦
-          img: https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png
-          link : https://nexmoe.com/
+#  - name: link #settings: widgetLink
+#    enable: true
+#    options:
+#      widgetLink: #链接组件
+#        - title: 折影轻梦
+#          img: https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png
+#          link : https://nexmoe.com/
 
 copyTip: "著作权归作者所有。\n商业转载请联系作者获得授权，非商业转载请注明出处。\n来源：%url" # 自定义复制版权文案,使用 %url 代替当前页面URL, 修改为false禁用
 
@@ -129,9 +129,9 @@ slotFooter: |
 
 # 自定义侧边栏尾部内容
 slotSidebar: |
-  <br><a target="_blank" href="https://beian.miit.gov.cn/">鄂ICP备2020018486号</a>
-  <br><a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">
-  <img src="https://i.dawnlab.me/c0268c1e6cfd0863d6ba35be1575941a.png" width="150px"></a>
+#  <br><a target="_blank" href="https://beian.miit.gov.cn/">鄂ICP备2020018486号</a>
+#  <br><a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">
+#  <img src="https://i.dawnlab.me/c0268c1e6cfd0863d6ba35be1575941a.png" width="150px"></a>
 
 # 评论框插槽
 slotComment: |
