@@ -1,7 +1,10 @@
 ---
 title: 无互联网环境nexus的搭建使用与同步
 date: 2024-02-07 20:11:40
-tags:
+tags: 
+   - nexus
+   - maven
+   - java
 ---
 [TOC]
 
