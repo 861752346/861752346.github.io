@@ -1,6 +1,6 @@
-avatar: https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png # 网站 Logo
+avatar: /images/avatar.jpeg # 网站 Logo
 background: # 既是博客的背景，又是文章默认头图
-  path: https://i.dawnlab.me/b5a7e61560facdd5b8aa9683fce147d7.png
+  path: /images/background.jpeg
   width: 1280
   height: 726
 favicon:

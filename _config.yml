@@ -1,11 +1,11 @@
-title: Hexo
+title: 小厂毕业生
 subtitle: ''
 description: ''
 keywords: null
 author: 囚牛
-language: en
-timezone: ''
-url: http://example.com
+language: zh-CN
+timezone: 'Asia/Shanghai'
+url: https://861752346.github.io
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
