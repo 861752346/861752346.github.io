@@ -132,10 +132,11 @@ slotSidebar: |
 #  <br><a target="_blank" href="https://beian.miit.gov.cn/">鄂ICP备2020018486号</a>
 #  <br><a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">
 #  <img src="https://i.dawnlab.me/c0268c1e6cfd0863d6ba35be1575941a.png" width="150px"></a>
+  <script>var _hmt = _hmt || [];(function() {  var hm = document.createElement("script");  hm.src = "https://hm.baidu.com/hm.js?ff2f05fd9102965e0ac805566c928c8c";  var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script>
 
 # 评论框插槽
 slotComment: |
-  请在你的配置文件中设置 slotComment
+#  请在你的配置文件中设置 slotComment
 
 slotCopyright: |
   <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
