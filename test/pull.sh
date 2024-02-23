@@ -1,41 +1,3 @@
----
-title: harbor中多架构镜像离线同步
-date: 2024-02-05 14:43:36
-tags: 
-  - harbor 
-  - docker 
-  - podman
----
-
-# harbor 多架构镜像维护
-
-## 向harbor推送多架构镜像
-```shell
-## 推送镜像
-docker push harbor.trscd.com.cn/trs-police/trinodb-trino:438-amd64
-docker push harbor.trscd.com.cn/trs-police/trinodb-trino:438-arm64
-## 创建清单
-docker manifest create --amend --insecure harbor.trscd.com.cn/trs-police/trinodb-trino:438 harbor.trscd.com.cn/trs-police/trinodb-trino:438-arm64 harbor.trscd.com.cn/trs-police/trinodb-trino:438-amd64
-## 为镜像标注平台和架构
-docker manifest annotate harbor.trscd.com.cn/trs-police/trinodb-trino:438 harbor.trscd.com.cn/trs-police/trinodb-trino:438-amd64 --os linux --arch amd64
-docker manifest annotate harbor.trscd.com.cn/trs-police/trinodb-trino:438 harbor.trscd.com.cn/trs-police/trinodb-trino:438-arm64 --os linux --arch arm64
-## 推送清单
-docker manifest push --purge --insecure harbor.trscd.com.cn/trs-police/trinodb-trino:438
-
-```
-## 从harbor中拉取多架构镜像并保存为文件用于同步到离线环境harbor中
-- 使用说明
-  - 执行 ./pull.sh -h 查看脚本使用说明。
-  - 脚本执行后产生一个result.tar.gz文件包，将文件离线拷贝解包后，执行里面的image.push.sh脚本即可将多架构镜像推送到harbor。
-- 注意： 脚本依赖jq，需要提前安装。
-```shell
-## centos 
-yum install jq
-## ubuntu
-apt-get install jq
-```
-- 脚本 
-```shell
 #!/bin/bash
 
 # 定义函数来显示帮助文档
@@ -189,5 +151,3 @@ chmod +x image.push.sh
 find "${script_dir}" -name "image.*" -printf '%f\0' | tar -czvf "${script_dir}/result.tar.gz" --null -T -
 find "${script_dir}" -name "image.*" -exec rm -rf {} \;
 set +x
-
-```
