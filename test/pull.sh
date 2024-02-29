@@ -68,6 +68,11 @@ image_tag="${option_s}"
 # 目标镜像tag
 target_tag="${option_t}"
 
+image_name="${target_tag##*/}"  # 删除最左侧的'/'及其左侧的所有内容
+image_name="${image_name%:*}"  # 删除最右侧的':'及其右侧的所有内容
+
+echo "image_name: ${image_name}"
+
 echo "执行docker manifest inspect 读取原始镜像platform信息"
 # 执行docker manifest inspect命令并获取结果
 result=$(docker manifest inspect "${image_tag}")
@@ -148,6 +153,11 @@ echo -e "${command_str}" > "${script_dir}"/image.push.sh
 chmod +x image.push.sh
 
 # 压缩结果
-find "${script_dir}" -name "image.*" -printf '%f\0' | tar -czvf "${script_dir}/result.tar.gz" --null -T -
-find "${script_dir}" -name "image.*" -exec rm -rf {} \;
+mkdir "${script_dir}/${image_name}"
+find "${script_dir}" -name "image.*" -exec mv {} "${script_dir}/${image_name}/" \;
+tar -czvf "${image_name}.tar.gz" "${image_name}"
+rm -rf "${script_dir}/${image_name}"
+
+#find "${script_dir}" -name "image.*" -printf '%f\0' | tar -czvf "${script_dir}/result.tar.gz" --null -T -
+#find "${script_dir}" -name "image.*" -exec rm -rf {} \;
 set +x
